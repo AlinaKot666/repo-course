@@ -18,5 +18,6 @@
   "homepage": "https://github.com/AlinaKot666/test1#readme",
   "dependencies": {
     "chalk": "^5.4.1"
-  }
+  },
+  "keywords": []
 }
