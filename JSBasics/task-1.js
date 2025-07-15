@@ -1,14 +1,14 @@
-// Строка
-let myString = "Привет, мир!";
-console.log("Строка:", myString);
+// String
+let myString = "Hello, world!";
+console.log("string:", myString);
 
-// Число
+// Number
 let myNumber = 42;
-console.log("Число:", myNumber);
+console.log("number:", myNumber);
 
 // Boolean
 let myBoolean = true;
-console.log("Булево значение:", myBoolean);
+console.log("boolean value:", myBoolean);
 
 // Null
 let myNull = null;

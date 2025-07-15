@@ -1,13 +1,13 @@
-// Примитивные типы данных
+// primitive data types
 
-let myString = "Привет, мир!";
+let myString = "Hello, world!";
 let myNumber = 42;
 let myBoolean = true;
 let myNull = null;
 let myUndefined = undefined;
 
-console.log("Строка:", myString);
-console.log("Число:", myNumber);
-console.log("Булево значение:", myBoolean);
+console.log("string:", myString);
+console.log("number:", myNumber);
+console.log("booleanvalue:", myBoolean);
 console.log("Null:", myNull);
 console.log("Undefined:", myUndefined);
