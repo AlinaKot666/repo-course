@@ -1,4 +1,3 @@
-lesson10/Book.js
 class Book {
   constructor(title, author, year) {
     this._title = title;
@@ -21,36 +20,36 @@ class Book {
 
   // setters with validation
   set title(value) {
-    if (typeof value !== "string" || value.length === 0) {
-      throw new Error("Title must be a non-empty string");
+    if (typeof value !== "string" || value.trim() === "") {
+      throw new Error("Title must be a valid string");
     }
     this._title = value;
   }
 
   set author(value) {
-    if (typeof value !== "string" || value.length === 0) {
-      throw new Error("Author must be a non-empty string");
+    if (typeof value !== "string" || value.trim() === "") {
+      throw new Error("Author must be a valid string");
     }
     this._author = value;
   }
 
   set year(value) {
-    if (typeof value !== "number" || value <= 0) {
-      throw new Error("Year must be a positive number");
+    if (typeof value !== "number" || value < 1000 || value > new Date().getFullYear()) {
+      throw new Error("Year must be a valid number");
     }
     this._year = value;
   }
 
-  // method to print info
+  // print book info
   printInfo() {
-    console.log(`Book: ${this.title}, Author: ${this.author}, Year: ${this.year}`);
+    console.log(`"${this.title}" by ${this.author}, published in ${this.year}`);
   }
 
-  // static method to find oldest book
+  // static method to find the oldest book
   static getOldestBook(books) {
-    return books.reduce((oldest, book) => {
-      return book.year < oldest.year ? book : oldest;
-    });
+    return books.reduce((oldest, current) =>
+      current.year < oldest.year ? current : oldest
+    );
   }
 }
 
