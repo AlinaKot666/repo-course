@@ -1,29 +1,29 @@
 const Book = require("./Book");
 const EBook = require("./EBook");
 
-// обычные книги
-const book1 = new Book("The Lord of the Rings", "J.R.R. Tolkien", 1954);
-const book2 = new Book("Pride and Prejudice", "Jane Austen", 1813);
-const book3 = new Book("The Little Prince", "Antoine de Saint-Exupéry", 1943);
+// create book objects
+const book1 = new Book("To Kill a Mockingbird", "Harper Lee", 1960);
+const book2 = new Book("1984", "George Orwell", 1949);
+const book3 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925);
 
-// электронная книга
-const ebook1 = new EBook("Atomic Habits", "James Clear", 2018, "EPUB");
+// create ebook object
+const ebook1 = new EBook("Clean Code", "Robert C. Martin", 2008, "PDF");
 
-// вывод информации
+// print info about all books
 book1.printInfo();
 book2.printInfo();
 book3.printInfo();
 ebook1.printInfo();
 
-// массив книг (и Book, и EBook)
-const books = [book1, book2, book3, ebook1];
+// array of books
+const library = [book1, book2, book3, ebook1];
 
-// найти самую старую книгу
-const oldestBook = Book.getOldestBook(books);
-console.log("\nOldest book in the list:");
+// find the oldest book
+const oldestBook = Book.getOldestBook(library);
+console.log("\nOldest book in the library:");
 oldestBook.printInfo();
 
-// создать EBook из обычной книги
-const ebookFromBook = EBook.fromBook(book2, "PDF");
-console.log("\nEBook created from Book:");
+// create ebook from book
+const ebookFromBook = EBook.fromBook(book2, "EPUB");
+console.log("\nEBook created from existing book:");
 ebookFromBook.printInfo();
