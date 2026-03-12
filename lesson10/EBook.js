@@ -11,16 +11,19 @@ class EBook extends Book {
   }
 
   set fileFormat(value) {
-    if (!value) {
-      throw new Error("File format cannot be empty");
+    if (typeof value !== "string" || value.trim() === "") {
+      throw new Error("File format must be a valid string");
     }
     this._fileFormat = value;
   }
 
   printInfo() {
-    console.log(`EBook: ${this.title}, Author: ${this.author}, Year: ${this.year}, Format: ${this.fileFormat}`);
+    console.log(
+      `"${this.title}" by ${this.author}, published in ${this.year} (E-book format: ${this.fileFormat})`
+    );
   }
 
+  // create EBook from existing Book
   static fromBook(book, format) {
     return new EBook(book.title, book.author, book.year, format);
   }
