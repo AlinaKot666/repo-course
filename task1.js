@@ -1,9 +1,10 @@
-function printMessage(text, delay) {
+function showMessageLater(message, delay) {
   setTimeout(() => {
-    console.log(text);
+    console.log(message);
   }, delay);
 }
 
-// example
-printMessage("This message will appear after 2 seconds", 2000);
-printMessage("JavaScript is working!", 1000);
+// examples
+showMessageLater("Preparing your report...", 1500);
+showMessageLater("Connecting to the server...", 2000);
+showMessageLater("Data loaded successfully!", 3000);
