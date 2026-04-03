@@ -3,7 +3,7 @@ import globals from "globals";
 
 export default [
   {
-    ignores: ["node_modules", "JSBasics"],
+    ignores: ["node_modules", "JSBasics", "report", ".github"],
   },
   {
     files: ["**/*.{js,mjs,cjs}"],
