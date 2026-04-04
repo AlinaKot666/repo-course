@@ -1,9 +1,8 @@
 name: API Tests
 
 on:
-  workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ main, actions-lesson14 ]
   pull_request:
     branches: [ main ]
 
@@ -19,5 +18,8 @@ jobs:
         with:
           node-version: 18
 
-      - run: npm install
-      - run: npm test
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
